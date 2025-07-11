@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+
+Sitemap: https://sembilansembilan99.github.io/rental-mobil-medan/sitemap.xml

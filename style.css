@@ -1,0 +1,909 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gold: #FFD700;
+    --white: #FFFFFF;
+    --blue-light: #4d5df1;
+    --blue-dark: #0a0f5c;
+    --blue-royal: #4169e1; /* Royal blue for buttons */
+    --blue-steel: #4682b4; /* Steel blue for accents */
+    --blue-primary: #0057d8; /* Your brand blue */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--white);
+    color: var(--blue-light);
+    line-height: 1.6;
+}
+
+/* === HEADER STYLES === */
+header {
+  background: var(--blue-dark);
+  color: var(--white);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+/* === NAVIGATION === */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  line-height: 1.5;
+}
+
+nav a:hover {
+  background-color: var(--blue-light);
+  color: var(--white);
+}
+
+/* === TOGGLE MENU === */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+/* === RESPONSIVE NAV === */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    align-self: center; /* ⬅️ Logo di tengah */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 12px 16px;
+    width: 100%;
+  }
+}
+
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.hero-image-container {
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+.hero-image {
+    max-width: 100%; /* Memastikan gambar responsif */
+    height: auto; /* Memastikan tinggi gambar proporsional */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-image:hover {
+    transform: scale(1.15);
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    background-color: var(--gold);
+    color: var(--blue-dark);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: var(--blue-light);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--blue-dark);
+}
+
+/* === ABOUT SECTION === */
+#tentang {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-dark));
+  color: var(--white);
+  text-align: justify;
+  gap: 30px;
+}
+
+.about-text {
+  flex: 1 1 60%;
+  padding-right: 30px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  border-bottom: 3px solid var(--gold);
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.about-image {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+/* === RESPONSIVE SETTING === */
+@media (max-width: 768px) {
+  #tentang {
+    flex-direction: column;
+    text-align: justify;
+    padding: 30px 15px;
+  }
+
+  .about-text {
+    flex: 1 1 100%;
+    padding-right: 0;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-image {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
+}
+
+
+/* KENAPA MEMILIH KAMI SECTION */
+#memilih {
+    padding: 20px;
+    background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+    overflow-x: auto;
+    text-align: center;
+}
+
+#memilih h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+    border-bottom: 3px solid var(--gold);
+    display: inline-block;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px 0;
+    flex-wrap: wrap; /* Mengubah menjadi wrap untuk responsivitas */
+}
+
+.feature-card {
+    flex: 1 1 240px; /* Mengubah menjadi flex basis */
+    text-align: center;
+    padding: 15px;
+    background: rgb(241, 241, 243);
+    border-radius: 10px;
+    color: #052442;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #E6F2FF;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: #FFD700;
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #1E90FF;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    color: #FFD700;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* MOBIL TERSEDIA SECTION */
+.cars {
+  padding: 40px 20px;
+  background: var(--blue-primary);
+  margin: 0 auto;
+}
+
+.cars h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+  border-bottom: 3px solid var(--gold);
+  display: inline-block;
+  text-align: start;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 kolom untuk desktop */
+  gap: 30px;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet (≤ 900px) → 2 kolom */
+@media (max-width: 900px) {
+  .car-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* HP (≤ 600px) → 1 kolom */
+@media (max-width: 600px) {
+  .car-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* CARD STYLING */
+.car-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--blue-light);
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: var(--blue-dark);
+}
+
+.car-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.car-card h3 {
+  color: var(--blue-dark);
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.car-card p {
+  color: var(--blue-dark);
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.car-card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials {
+    background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+    color: var(--white);
+    padding: 20px;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+    border-bottom: 3px solid var(--gold);
+    display: inline-block;
+    text-align: left;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.rating {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Testimonial Author */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gold);
+}
+
+.author-info h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.author-info p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 3px;
+    color: black;
+}
+
+.author-info span {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    color: black;
+}
+
+/* === SHARE EXPERIENCE BUTTON === */
+.share-btn-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.share-experience-btn {
+  background: var(--blue-dark);
+  color: var(--white);
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.share-experience-btn i {
+  margin-right: 8px;
+}
+
+.share-experience-btn:hover {
+  background: var(--blue-light);
+}
+
+/* === MODAL === */
+.modal {
+  display: none; /* aktifkan dengan JS: display: flex; */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Modal Content */
+.modal-content {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+  position: relative;
+  animation: fadeInScale 0.4s ease;
+}
+
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: var(--blue-dark);
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+  from {
+      transform: scale(0.9);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* === FORM === */
+.review-form h3 {
+  margin-bottom: 20px;
+  color: var(--blue-dark);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--blue-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid var(--blue-light);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue-dark);
+  outline: none;
+}
+
+/* === RATING STARS === */
+.rating-stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rating-stars input {
+  display: none;
+}
+
+.rating-stars label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.rating-stars input:checked ~ label,
+.rating-stars label:hover,
+.rating-stars label:hover ~ label {
+  color: gold;
+}
+
+/* === SUBMIT BUTTON === */
+.submit-btn {
+  background: var(--blue-dark);
+  color: var(--white);
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.submit-btn i {
+  margin-right: 8px;
+}
+
+.submit-btn:hover {
+  background: var(--blue-light);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 480px) {
+  .modal-content {
+      padding: 15px;
+  }
+
+  .review-form h3 {
+      font-size: 1.1rem;
+  }
+
+  .form-group label,
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+      font-size: 0.9rem;
+  }
+
+  .submit-btn {
+      font-size: 1rem;
+  }
+
+  .rating-stars label {
+      font-size: 1.5rem;
+  }
+}
+/* Testimonial Slider Styles */
+.testimonial-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.slider-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slider-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.slider-dot.active {
+    background: var(--gold);
+}
+
+.slider-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .slider-arrow {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+  }
+  
+  .slider-arrow:hover {
+      background: var(--gold);
+      color: var(--blue-dark);
+  }
+  
+  .slider-arrow.prev {
+      margin-left: 15px;
+  }
+  
+  .slider-arrow.next {
+      margin-right: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .review-form h3 {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .form-group label {
+      font-size: 0.95rem;
+    }
+  
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  
+    .rating-stars label {
+      font-size: 1.5rem;
+    }
+  }
+  
+/* CONTACT SECTION */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  background: linear-gradient(to bottom, var(--blue-light), var(--blue-dark));
+  color: var(--white);
+  justify-content: center;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.map-container {
+  flex: 1 1 300px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 10px;
+  display: block;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info p {
+    text-align: left;
+  }
+}
+
+/* FOOTER */
+footer {
+    background: var(--blue-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid var(--gold);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ukuran dasar responsif */
+html {
+  font-size: 16px;
+}
+
+/* === RESPONSIVE FONT FOR HEADINGS === */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem); /* dari 2rem sampai 3rem tergantung lebar layar */
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 600;
+}
+
+p, a, li, label, input, textarea, select {
+  font-size: clamp(0.95rem, 2.5vw, 1rem); /* fleksibel tapi tetap stabil */
+  line-height: 1.6;
+}
+
+/* Responsive overrides untuk layar kecil */
+@media (max-width: 480px) {
+  h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+  }
+      h2 {
+        font-size: 1.4rem !important;
+        line-height: 1.3;
+      }
+    
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p, a, li {
+    font-size: 0.95rem;
+  }
+}
+
