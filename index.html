@@ -1,1 +1,506 @@
-Haleluya
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT.SEMBILAN SEMBILAN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">PT.SEMBILAN SEMBILAN</div>
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+  <nav id="navbar">
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#memilih">Kenapa Memilih Kami</a>
+    <a href="#mobil">Mobil</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+<section class="hero" id="beranda">
+  <div class="hero-content">
+    <h1>SEWA RENTAL MOBIL DI MEDAN</h1>
+    <p>Mudah, Cepat, dan Terpercaya</p>
+    
+    <div class="hero-image-container">
+      <img class="hero-image" src="images/rental.png" alt="Armada Rental Mobil">
+    </div>
+    <div class="hero-buttons">
+      <!-- WhatsApp dengan pesan otomatis -->
+      <a href="https://wa.me/6281377661899?text=Halo%2C%20saya%20ingin%20menyewa%20Hiace.%20Mohon%20informasinya." 
+         class="btn">
+        <i class="fab fa-whatsapp" style="margin-right: 6px;"></i> WhatsApp
+      </a>
+      <!-- Telepon biasa -->
+      <a href="tel:081377661899" class="btn">
+        <i class="fas fa-phone" style="margin-right: 6px;"></i> Telepon
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="tentang">
+  <div class="about-text">
+    <h2>Tentang Kami</h2>
+    <p><strong>PT. SEMBILAN SEMBILAN</strong> adalah Perusahaan rental mobil resmi terpercaya di Medan yang telah berpengalaman melayani berbagai kebutuhan transportasi pelanggan dari berbagai kalangan — mulai dari individu, keluarga, wisatawan, hingga instansi dan perusahaan.
+
+      Kami menyediakan beragam jenis armada terbaik seperti Pajero, Fortuner, Innova, Hiace, hingga Medium Bus yang selalu dalam kondisi prima, bersih, dan terawat. Semua kendaraan kami siap menunjang perjalanan Anda dengan kenyamanan dan keamanan maksimal.</div>
+  <div class="about-image">
+    <img src="images/hiace.png" alt="Bus Rental" />
+  </div>
+</section>
+
+<section id="memilih">
+  <h2>Mengapa Memilih Kami</h2>
+  <div class="features-container">
+    <div class="feature-card">
+      <div class="feature-icon">🕒</div>
+      <h3>Cepat & Mudah</h3>
+      <p>Kemudahan Reservasi. <br>Kami dapat di hubungi kapan saja.</p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon">🚘</div>
+      <h3>Unit Terawat</h3>
+      <p>Armada kami selalu dirawat<br>secara rutin. Baik AC, Audio,<br>Kebersihan Kabin, dll.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⛑️</div>
+      <h3>Aman & Nyaman</h3>
+      <p>Driver yang Ramah dan<br>Berpengalaman akan memberikan<br>kemanan dan kenyamanan anda<br>dalam perjalanan. </p>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon">🤝</div>
+      <h3>Harga Bersahabat</h3>
+      <p>Harga kompetitif dengan<br>layanan terbaik, menyesuaikan<br>kebutuhan perjalanan Anda.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cars" id="mobil">
+  <h2>Pesan Jenis Mobil Sesuai Kebutuhan Anda!</h2>
+  <div class="car-grid">
+    
+    <div class="car-card">
+      <img src="images/inova.png" alt="Innova" />
+      <h3>TOYOTA INNOVA REBORN</h3>
+      <button class="btn" onclick="openModal('Toyota Innova')">Booking Sekarang</button>
+    </div>
+    <div class="car-card">
+      <img src="images/avanza.png" alt="Avanza" />
+      <h3>AVANZA</h3>
+      <button class="btn" onclick="openModal('avanza')">Booking Sekarang</button>
+    </div>
+    
+    <div class="car-card">
+      <img src="images/terios.png" alt="terios" />
+      <h3>TERIOS</h3>
+      <button class="btn" onclick="openModal('terios')">Booking Sekarang</button>
+    </div>
+    
+    <div class="car-card">
+      <img src="images/fortuner.png" alt="fortuner" />
+      <h3>FORTUNER</h3>
+      <button class="btn" onclick="openModal('fortuner')">Booking Sekarang</button>
+    </div>
+  
+   
+    <div class="car-card">
+      <img src="images/pajero.png" alt="pajero" />
+      <h3>PAJERO</h3>
+      <button class="btn" onclick="openModal('Pajero')">Booking Sekarang</button>
+    </div>
+ 
+    <div class="car-card">
+      <img src="images/hiace.png" alt="hiace" />
+      <h3>HIACE</h3>
+      <button class="btn" onclick="openModal('Hiace')">Booking Sekarang</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials" id="review">
+  <div class="section-header">
+    <h2>Lihat Kata Pelanggan Kami</h2>
+    <p>Pengalaman nyata dari pelanggan yang telah menggunakan layanan kami</p>
+  </div>
+  
+  <!-- Ganti testimonial-container dengan testimonial-slider -->
+  <div class="testimonial-slider">
+    <div class="slider-arrows">
+      <button class="slider-arrow prev">❮</button>
+      <button class="slider-arrow next">❯</button>
+    </div>
+    
+    <div class="testimonial-track" id="testimonialTrack">
+      <!-- Testimonial cards akan dimasukkan di sini oleh JavaScript -->
+    </div>
+    
+    <div class="slider-nav" id="sliderNav">
+      <!-- Navigation dots akan dibuat oleh JavaScript -->
+    </div>
+  </div>
+  
+  <!-- Share Experience Button -->
+  <div class="share-btn-container">
+    <button class="share-experience-btn" id="shareBtn">
+      <i class="fas fa-pen"></i> Bagikan Pengalaman Anda
+    </button>
+  </div>
+  
+  <!-- Review Modal -->
+  <div id="reviewModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="review-form">
+        <h3>Bagikan Pengalaman Anda</h3>
+        <form id="reviewForm">
+          <div class="form-group">
+            <label for="reviewName">Nama Anda*</label>
+            <input type="text" id="reviewName" required placeholder="Nama lengkap">
+          </div>
+          
+          <div class="form-group">
+            <label for="reviewEmail">Email</label>
+            <input type="email" id="reviewEmail" placeholder="Email (opsional)">
+          </div>
+          
+          <div class="form-group">
+            <label>Tipe Pengguna</label>
+            <select id="userType">
+              <option value="bisnis">Pelanggan Bisnis</option>
+              <option value="wisata">Pelanggan Wisata</option>
+              <option value="keluarga">Pelanggan Keluarga</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Rating*</label>
+            <div class="rating-stars">
+              <input type="radio" id="star5" name="rating" value="5" required>
+              <label for="star5">★</label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4">★</label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3">★</label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2">★</label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1">★</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="reviewText">Ulasan Anda*</label>
+            <textarea id="reviewText" required placeholder="Ceritakan pengalaman Anda menggunakan layanan kami"></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Kirim Ulasan
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontak">
+    <!-- Google Maps -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3982.261455791688!2d98.58157522394455!3d3.526959400716184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sGHGP%2B7F5%20Perumahan%20Griya%20Mutiara%20-I%2C%20Jl.%20Snakma%2C%20Tj.%20Anom%2C%20Kec.%20Pancur%20Batu%2C%20Kabupaten%20Deli%20Serdang%2C%20Sumatera%C2%A0Utara%C2%A020351!5e0!3m2!1sid!2sid!4v1751860055771!5m2!1sid!2sid"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>PT. SEMBILAN SEMBILAN</h2>
+      <p><i class="fas fa-map-marker-alt" style="color: #EF4444;"></i> Perumahan Griya Mutiara -I, Jl. Snakma, Tj. Anom, Kec. Pancur Batu, Kabupaten Deli Serdang, Sumatera Utara 20351</p>
+      <p><a href="https://wa.me/6281377661899?text=Halo%2C%20saya%20ingin%20menyewa%20Hiace." target="_blank"><i class="fab fa-whatsapp" style="color: #25D366;"></i> 0813 7766 1899</a></p>
+      <p><a href="tel:081377661899"><i class="fas fa-phone" style="color: #4f46e5;"></i> 0813 7766 1899</a></p>
+      <p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pt.ssm99medan@gmail.com" target="_blank">
+          <i class="fas fa-envelope" style="color: #EA4335;"></i> pt.ssm99medan@gmail.com
+        </a>
+      </p>
+      
+      <p><a href="https://instagram.com/sewa_hiace_medan_99" target="_blank"><i class="fab fa-instagram" style="color: #C13584;"></i> @sewa_hiace_medan_99</a></p>
+      <p><a href="https://tiktok.com/@Sewa_Hiace_medan99" target="_blank"><i class="fab fa-tiktok" style="color: black;"></i> Sewa hiace medan</a></p>
+    </div>
+  </section>
+  
+<footer>
+  <p>&copy; 2025 PT. SEMBILAN SEMBILAN. All rights reserved.</p>
+</footer>
+<script>
+    
+    //toogle header
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
+  
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+  // Modal function placeholder
+  function openModal(carName) {
+    alert(`Anda akan memesan ${carName}. Silahkan hubungi kami via WhatsApp!`);
+    window.location.href = "https://wa.me/6281377661899";
+  }
+  //review customer
+   // Testimonial Data and Slider Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Data testimonial awal
+  const testimonials = [
+      {
+          name: "Budi Santoso",
+          type: "Pelanggan Bisnis",
+          rating: 5,
+          review: "Pelayanan sangat memuaskan! Mobil bersih dan nyaman, sopir sangat profesional. Akan menggunakan jasa ini lagi untuk perjalanan berikutnya.",
+          date: "12 Januari 2024",
+          photo: "https://randomuser.me/api/portraits/men/32.jpg"
+      },
+      {
+          name: "Anita Wijaya",
+          type: "Pelanggan Keluarga",
+          rating: 4,
+          review: "Harga kompetitif dengan kualitas pelayanan yang baik. Mobil dalam kondisi prima dan tepat waktu saat penjemputan.",
+          date: "5 Februari 2024",
+          photo: "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      {
+          name: "Rudi Hartono",
+          type: "Pelanggan Wisata",
+          rating: 5,
+          review: "Sangat recommended! Proses booking mudah, respon cepat via WhatsApp. Sopir sangat membantu dan tahu jalan-jalan alternatif di Medan.",
+          date: "20 Maret 2024",
+          photo: "https://randomuser.me/api/portraits/men/75.jpg"
+      }
+  ];
+
+  // Elemen DOM
+  const track = document.getElementById('testimonialTrack');
+  const sliderNav = document.getElementById('sliderNav');
+  const prevBtn = document.querySelector('.slider-arrow.prev');
+  const nextBtn = document.querySelector('.slider-arrow.next');
+  const modal = document.getElementById("reviewModal");
+  const shareBtn = document.getElementById("shareBtn");
+  const closeBtn = document.querySelector(".close-modal");
+  const reviewForm = document.getElementById("reviewForm");
+  
+  // Variabel slider
+  let currentIndex = 0;
+  let cardsPerView = 3;
+  let autoSlideInterval;
+  
+  // Fungsi untuk menentukan jumlah card yang terlihat berdasarkan ukuran layar
+  function updateCardsPerView() {
+      if (window.innerWidth < 768) {
+          cardsPerView = 1;
+      } else if (window.innerWidth < 1024) {
+          cardsPerView = 2;
+      } else {
+          cardsPerView = 3;
+      }
+      createTestimonialCards();
+  }
+  
+  // Fungsi untuk membuat card testimonial
+  function createTestimonialCards() {
+      track.innerHTML = '';
+      sliderNav.innerHTML = '';
+      
+      testimonials.forEach((testimonial, index) => {
+          // Buat elemen card
+          const card = document.createElement('div');
+          card.className = 'testimonial-card';
+          card.style.minWidth = `calc(100% / ${cardsPerView} - 20px)`;
+          card.style.margin = '0 10px';
+          
+          // Buat rating stars
+          let stars = '';
+          for (let i = 0; i < 5; i++) {
+              stars += i < testimonial.rating ? '★' : '☆';
+          }
+          
+          // Isi konten card
+          card.innerHTML = `
+              <div class="rating">${stars}</div>
+              <div class="testimonial-content">
+                  <p>"${testimonial.review}"</p>
+              </div>
+              <div class="testimonial-author">
+                  <img src="${testimonial.photo}" alt="${testimonial.name}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=random'">
+                  <div class="author-info">
+                      <h4>${testimonial.name}</h4>
+                      <p>${testimonial.type}</p>
+                      <span>${testimonial.date}</span>
+                  </div>
+              </div>
+          `;
+          
+          track.appendChild(card);
+          
+          // Buat navigation dot
+          const dot = document.createElement('div');
+          dot.className = 'slider-dot';
+          dot.dataset.index = index;
+          dot.addEventListener('click', () => goToSlide(index));
+          sliderNav.appendChild(dot);
+      });
+      
+      updateSlider();
+  }
+  
+  // Fungsi untuk update posisi slider
+  function updateSlider() {
+      const cardWidth = track.children[0]?.offsetWidth || 300;
+      const gap = 20;
+      const newPosition = -currentIndex * (cardWidth + gap);
+      track.style.transform = `translateX(${newPosition}px)`;
+      
+      // Update active dot
+      const dots = document.querySelectorAll('.slider-dot');
+      dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+      });
+      
+      // Nonaktifkan tombol jika di boundary
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= testimonials.length - cardsPerView;
+  }
+  
+  // Fungsi untuk pergi ke slide tertentu
+  function goToSlide(index) {
+      currentIndex = Math.max(0, Math.min(index, testimonials.length - cardsPerView));
+      updateSlider();
+      resetAutoSlide();
+  }
+  
+  // Fungsi untuk slide berikutnya
+  function nextSlide() {
+      if (currentIndex < testimonials.length - cardsPerView) {
+          currentIndex++;
+      } else {
+          currentIndex = 0;
+      }
+      updateSlider();
+      resetAutoSlide();
+  }
+  
+  // Fungsi untuk slide sebelumnya
+  function prevSlide() {
+      if (currentIndex > 0) {
+          currentIndex--;
+      } else {
+          currentIndex = testimonials.length - cardsPerView;
+      }
+      updateSlider();
+      resetAutoSlide();
+  }
+  
+  // Fungsi untuk auto slide
+  function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, 5000);
+  }
+  
+  function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+  }
+  
+  // Fungsi untuk menangani submit form
+  function handleFormSubmit(e) {
+      e.preventDefault();
+      
+      // Validasi form
+      const name = document.getElementById("reviewName").value.trim();
+      const rating = document.querySelector("input[name='rating']:checked");
+      const reviewText = document.getElementById("reviewText").value.trim();
+      
+      if (!name) {
+          alert("Silahkan masukkan nama Anda");
+          return;
+      }
+      
+      if (!rating) {
+          alert("Silahkan beri rating");
+          return;
+      }
+      
+      if (!reviewText) {
+          alert("Silahkan tulis ulasan Anda");
+          return;
+      }
+      
+      // Buat testimonial baru
+      const newTestimonial = {
+          name: name,
+          type: document.getElementById("userType").value,
+          rating: parseInt(rating.value),
+          review: reviewText,
+          date: new Date().toLocaleDateString("id-ID", { 
+              day: 'numeric', 
+              month: 'long', 
+              year: 'numeric' 
+          }),
+          photo: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random`
+      };
+      
+      // Tambahkan ke array
+      testimonials.unshift(newTestimonial);
+      
+      // Perbarui slider
+      createTestimonialCards();
+      goToSlide(0);
+      
+      // Reset form
+      e.target.reset();
+      
+      // Tutup modal
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+      
+      // Notifikasi
+      alert("Terima kasih atas ulasan Anda!");
+  }
+  
+  // Event Listeners
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+  shareBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+  });
+  closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+  });
+  window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+      }
+  });
+  reviewForm.addEventListener("submit", handleFormSubmit);
+  window.addEventListener('resize', updateCardsPerView);
+  
+  // Inisialisasi
+  updateCardsPerView();
+  startAutoSlide();
+});
+
+</script>
+</body>
+</html>
